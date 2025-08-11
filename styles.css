@@ -1,3 +1,9 @@
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body, html{
   overflow-x: hidden;
   padding: 0;
@@ -7,125 +13,134 @@ body, html{
 
 body {
   background: #ffffff;
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 82%, rgba(255, 250, 181, 1) 100%);
-  padding-top: 3vh;
 }
 
-.lilita-one-regular {
-  font-family: "Birch Std", sans-serif;
+.cabecera{
+  /*background: #020024;
+  background: linear-gradient(0deg, rgba(36, 0, 2, 0.18) 0%, rgba(255, 255, 255, 0) 3%);*/
+  background-color: #F7D044;
+}
+
+.pie{
+  background: #420000;
+  background: linear-gradient(180deg, rgba(66, 0, 0, 1) 0%, rgba(105, 0, 0, 1) 20%, rgba(253, 29, 29, 1) 91%);
+}
+
+.cabecera, .pie{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.texto-cabecera, .texto-pie {
+  font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-
-.cabecera {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin-bottom: 0;
-}
-
-.texto{
-  text-align: center;
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-  position: relative;
-}
-
-.texto h1{
-  font-family: 'Lilita One', sans-serif;
+.texto-cabecera h1, .texto-pie h1{
   text-transform: uppercase;
-  font-size: 5em;
-  margin-top: 0;
-  color: #fc3223;
-  line-height: .9em;
 }
 
-.texto h2{
-  font-family: 'Lilita One', sans-serif;
-  color: #fc3223;
-  text-transform: uppercase;
+.texto-cabecera h1{
+  color: #9e0b00;
+  font-size: 4em;
+  line-height: 1em;
+  letter-spacing: .05em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.texto-pie h1{
+  color: #fff;
+  font-size: 4em;
+  line-height: 1em;
+  letter-spacing: .05em;
+  text-shadow: 5px 5px 10px rgba(71, 0, 0, 0.92);
+}
+
+.texto-pie p{
+  text-decoration: none;
+  color: #fff;
   font-size: 3em;
-  margin: 0;
+  line-height: .5em;
+  letter-spacing: .01em;
+  text-shadow: 3px 3px 6px rgba(71, 0, 0, 0.92);
 }
 
-.texto h3{
-  font-family: 'Lilita One', sans-serif;
-  color: #fc3223;
-  font-size: 2.5em;
-  margin: 0;
+.texto-pie a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  text-shadow: 3px 3px 6px rgba(71, 0, 0, 0.92);
 }
 
-.texto p{
-  font-family: 'Lilita One', sans-serif;
-  font-size: 2em;
-  color: #fc3223;
+.texto-pie img{
+  width: 10%;
+}
+
+a{
+  align-items: center;
+  line-height: 100px;
+  animation: link-pulse 2.2s ease-in-out infinite;
+  transition: transform 100ms ease, filter 100ms ease;
+}
+
+a:hover,
+a:focus {
+  transform: scale(1.06);
+  filter: drop-shadow(0 6px 18px black);
+  outline: none;
+}
+
+.imagen-cabecera, .imagen-pie {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: flex-end;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 .imagen-cabecera {
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.imagen-pie {
+  filter: drop-shadow(5px 5px 10px rgba(71, 0, 0, 0.92));
+}
+
+.imagen-cabecera img {
   width: 100%;
-  top: 33%;
-  left: 15%;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-}
-
-.imagen-cabecera img{
-  width: 70%;
-}
-
-.medio{
-  border-top: 2px solid #fc3223;
-  width: 100%;
-  height: 50vh;
-  margin-top: 32%;
-}
-
-.imagen {
-  width: 100%;
-  top: 33%;
-  left: 15%;
-  align-items: center;
-  justify-content: center;
-}
-
-.imagen img{
-  margin-left: 35%;
-  width: 30%;
-}
-
-.final{
-  background-color: white;
-  margin-top: 20vh;
-  margin-bottom: 10vh;
-}
-
-.whatsapp{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.whatsapp p{
-  font-family: 'Lilita One', sans-serif;
-  font-size: 2em;
-  color: #fc3223;
-  white-space: nowrap;
-  width: 15%;
   padding: 0;
   margin: 0;
-  text-align: center;
+  align-self: flex-end;
 }
 
-.imagen-wsp {
-  width: 3%;
-  height: 3%;
+.imagen-pie img {
+  width: 70%;
+  padding: 0;
+  margin: 0;
+  align-self: flex-end;
 }
 
+@keyframes link-pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 0 rgba(0,0,0,0));
+    opacity: 1;
+  }
+  50% {
+    transform: scale(3);
+    filter: drop-shadow(0 6px 18px black);
+    opacity: 0.98;
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 0 rgba(0,0,0,0));
+    opacity: 1;
+  }
+}
